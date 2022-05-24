@@ -8,9 +8,9 @@ $si2 = "https://download.sysinternals.com/files/Autoruns.zip"
 Write-Host "[!] var.si3.set"
 $si3 = "https://download.sysinternals.com/files/ProcessMonitor.zip"
 Write-Host "[!] get.sysinternals;1,2,3:"
-Invoke-WebRequest -Uri $si1 -OutFile procexp64.zip
-Invoke-WebRequest -Uri $si2 -OutFile autoruns.zip
-Invoke-WebRequest -Uri $si3 -OutFile procmon.zip
+.\wget.exe $si1
+.\wget.exe $si2
+.\wget.exe $si3
 .\7.exe e procexp64.zip
 .\7.exe e autoruns.zip
 .\7.exe e procmon.zip
